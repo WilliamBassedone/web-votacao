@@ -1,0 +1,30 @@
+[
+    {
+        "zoneId": "1000",
+        "sessionIds": ["100", "200", "300"]
+    },
+    {
+        "zoneId": "123",
+        "sessionIds": ["456"]
+    },
+    {
+        "zoneId": "147",
+        "sessionIds": ["1", "2"]
+    },
+    {
+        "zoneId": "412",
+        "sessionIds": ["582", "583"]
+    },
+    {
+        "zoneId": "5415",
+        "sessionIds": ["150", "250"]
+    },
+    {
+        "zoneId": "5416",
+        "sessionIds": ["10", "11"]
+    },
+    {
+        "zoneId": "700",
+        "sessionIds": ["856"]
+    }
+]

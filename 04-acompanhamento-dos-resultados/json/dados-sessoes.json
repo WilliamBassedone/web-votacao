@@ -1,0 +1,17 @@
+{
+    "totalVotosValidos": 1000,
+    "percentualVotosValidos": 95.0,
+    "candidatos": [
+        {
+            "nomeCandidato": "João Silva",
+            "quantidadeVotos": 845121,
+            "percentualVotos": 60.0
+        },
+        {
+            "nomeCandidato": "Maria Souza",
+            "quantidadeVotos": 5465412,
+            "percentualVotos": 40.0
+        }
+    ]
+    }
+    

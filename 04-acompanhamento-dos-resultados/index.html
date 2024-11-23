@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonas e Seções</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Selecione a Zona e a Sessão</h2>
+        <div class="mb-3">
+            <label for="zoneSelect" class="form-label">Zona Eleitoral:</label>
+            <select id="zoneSelect" class="form-select">
+                <option value="" selected>Todos</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="sessionSelect" class="form-label">Sessão Eleitoral:</label>
+            <select id="sessionSelect" class="form-select" disabled>
+                <option value="" selected>Todos</option>
+            </select>
+        </div>
+
+        <!-- Resumo geral -->
+        <div id="resumoGeral" class="mt-4 d-none">
+            <h4 class="mb-4">Resumo Geral</h4>
+            <p><strong>Total de Votos Válidos:</strong> <span id="totalVotosValidos"></span></p>
+            <p><strong>Percentual de Votos Válidos:</strong> <span id="percentualVotosValidos"></span>%</p>
+        </div>
+
+        <!-- Lista de candidatos -->
+        <div id="candidatosList" class="mt-4 d-none">
+            <h4 class="mb-4">Candidatos</h4>
+            <div id="candidatosContainer" class="row g-3">
+                <!-- Os candidatos serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

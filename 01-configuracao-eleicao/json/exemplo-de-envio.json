@@ -1,0 +1,23 @@
+{
+  "nomeEleicao": "Eleição Municipal",
+  "candidatos": [
+    "João Silva",
+    "Maria Souza"
+  ],
+  "zonasEleitorais": [
+    {
+      "idZona": "5416",
+      "ElectoralZoneId": "520", 
+      "secoes": [
+        {
+          "idSecao": "12",
+          "quantidadeEleitores": "100"
+        },
+        {
+          "idSecao": "14",
+          "quantidadeEleitores": "100"
+        }
+      ]
+    }
+  ]
+}
