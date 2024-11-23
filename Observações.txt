@@ -1,0 +1,66 @@
+Observações sobre API
+
+. Não consegui acessar os endpoints via JavaScript por causa de cors, tem que ajustar na API para aceitar a requisição de um dominio diferente.
+
+    . Dentro dos diretórios de cada tela tem a pasta json que tem os json pra teste de cada tela
+    
+    . Como eu sei como vai vim os resultados da API criei arquivos fixos e fiz a requisição direto para eles.
+
+    . Nos códigos que utilizam os endpoint GET coloquei o código abaixo, que eu consigo escolher de onde eu quero fazer a requisição pelo bool em useLocalJson, para usar endpoints da API quando tiver ajustado é só trocar para false. mas verifica se ta certo os endpoints no JS, pode ser que você mude e tenha que atualizar no script JS.
+
+        const useLocalJson = true;
+        const BASE_URL = useLocalJson
+            ? 'json'
+            : 'https://midge-able-alpaca.ngrok-free.app/api/eleicao';
+
+        const endpoints = {
+            zonas: `${BASE_URL}/${useLocalJson ? 'dados-zonas.json' : 'dados-zonas'}`,
+            sessoes: `${BASE_URL}/${useLocalJson ? 'dados-sessoes.json' : 'importacoes-secoes'}`,
+            gerais: `${BASE_URL}/${useLocalJson ? 'dados-gerais.json' : 'importacoes-secoes'}`,
+        };
+
+
+. No endpoint de resultados esta vindo errado o json
+
+    Esta vindo assim:
+
+        {
+            "totalVotosValidos": 3500,
+            "percentualVotosValidos": 100,
+            "candidatos": [
+                {
+                    "nomeCandidato": null,
+                    "quantidadeVotos": 3500,
+                    "percentualVotos": 100
+                }
+            ]
+        }
+
+    Deveria vim assim:
+
+        {
+            "totalVotosValidos": 10000,
+            "percentualVotosValidos": 96.0,
+            "candidatos": [
+                {
+                    "nomeCandidato": "João Silva",
+                    "quantidadeVotos": 1000,
+                    "percentualVotos": 60.0
+                },
+                {
+                    "nomeCandidato": "Maria Souza",
+                    "quantidadeVotos": 1400,
+                    "percentualVotos": 40.0
+                }
+            ]
+        }
+
+. Observações no front-end:
+
+    Fiz as validações que eram solicitadas no explicação do professor, como as validações de json etc, mas acredito que tenha que ser feito no lado da API, junto com as outras validações que faltam, como as configurações.
+
+
+
+Já subi pro Github, só fazer o clone pra tua máquina
+
+    https://github.com/WilliamBassedone/web-votacao
